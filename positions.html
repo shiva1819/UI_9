@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		div{
+			background-color: #ccc;
+		}
+		div ul{
+			margin:0px;
+		}
+		div ul li{
+			display: inline-block;
+			line-height: 50px;
+
+		}
+		#note{
+			width: 1200px;
+			height: 4300px;
+			background-color: #f00;
+			position:relative; /* static | relative | absolute | fixed */
+			/*left: 300px;*/
+		}
+		#relative{
+			width: 300px;
+			height: 200px;
+			background-color: lime;
+			position: fixed;
+			right:50px;
+			top: 40px;
+			z-index: 99999;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<ul>
+			<li>
+				Home
+			</li>
+			<li>
+				Home
+			</li>
+			<li>
+				Home
+			</li>
+			<li>
+				Home
+			</li>
+		</ul>
+	</div>
+	<div id="note">
+		Some Note
+		<div id="relative">
+			relative
+		</div>
+	</div>
+
+	
+</body>
+</html>
