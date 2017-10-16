@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		/* before, after, first-line, first-letter, section. */
+		#one{
+			width: 100px;
+			height: 100px;
+			border:1px solid;
+			margin: auto;
+			position: relative;
+		}
+		#one:before{
+			content: "";
+			position: absolute;
+			left: -120px;
+			top: 40%;
+			border:1px solid red;
+			width: 100px;
+			height: 1px;
+
+		}
+		#one:after{
+			content: "---------after-------";
+			position: absolute;
+			right:-120px;
+			top: 40%;
+
+		}
+		div{
+			width: 400px;
+		}
+		div:first-line{
+			color: red;
+		}
+		div:first-letter{
+			font-size: 40px;
+			font-style: italic;
+			background-color: #ccc;
+			padding: 10px;
+		}
+		div::selection {
+  color: gold;
+  background: red;
+}
+	</style>
+</head>
+<body>
+	<div id="one">
+
+	</div>
+	<hr> 
+	<h2> firstLine/Letter</h2>
+	<div>
+		Page 1 / 30 of Our Free Website Templates. Skaxis Website Template. Skaxis Template Type: CSS & HTML5 / Responsive. Glozzom Website Template.
+		You've visited this page 2 times. Last visit: 7/10/17
+	</div>
+		<p>
+		Page 1 / 30 of Our Free Website Templates. Skaxis Website Template. Skaxis Template Type: CSS & HTML5 / Responsive. Glozzom Website Template.
+		You've visited this page 2 times. Last visit: 7/10/17
+	</p>
+</body>
+</html>
