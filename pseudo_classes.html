@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	/* ::first-child, ::last-child, ::nth-child, ::only-child, ::last-of-type*/
+		div p:last-child{
+			color: red;
+			background-color: yellow;
+
+		}
+		div p:first-child{
+			color: blue;
+			background-color: yellow;
+
+		}
+		div p:nth-child(4){
+			background-color: crimson;
+			color: #fff;
+		}
+		p span:only-child{
+			color: blue;
+			background: red;
+		}
+		div p:first-of-type{
+			background-color: lime;
+		}
+	</style>
+</head>
+<body>	
+	<div>
+		<p> This is P1 </p>
+		<p id="one"> <span>This is P1</span> </p>
+		<p> This is P1 </p>
+		<span></span>
+		<span></span>
+		<span> Demo Test....</span>
+		<p> This is P1 </p>
+		<p> This is P1 </p>
+		<p> This is P1 </p>
+	</div>
+</body>
+</html>
