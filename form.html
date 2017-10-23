@@ -2,8 +2,58 @@
 <html>
 <head>
 	<title></title>
+	<style type="text/css">
+		input[type='text']{
+			width: 200px;
+			height: 30px;
+			border:0px;
+			background-color: #ccc;
+			color: #fff;
+			font-size: 20px;
+		}
+	</style>
 </head>
 <body>		
-	
+	<div>
+		<form action="index.html">
+			<fieldset>
+				<legend> form Elements </legend>
+				<p>
+					<input type="text" name="username" placeholder="username">
+				</p>
+				<div>
+					password : <input type="password" name="password">
+				</div>
+				<div>
+					male <input type="radio" name="gender">
+				 	female <input type="radio" name="gender">
+				</div>
+				<div>
+					Hyderabad <input type="checkbox" name="Hyderabad">
+					Hyderabad <input type="checkbox" name="Hyderabad">
+					Hyderabad <input type="checkbox" name="Hyderabad">
+					Hyderabad <input type="checkbox" name="Hyderabad">
+				</div>
+				<div>
+					<h4> DropDown </h4>
+					<select>
+						<option> one </option>
+						<option> Two </option>
+						<option> Three </option>
+						<option> Four  </option>
+					</select>
+				</div>
+				<div>
+					<textarea>
+						
+					</textarea>
+				</div>
+				<div>
+					<input type="submit" name="submit" value="submit">
+					<input type="button" name="login" value="login">
+				</div>
+				</fieldset>
+		</form>
+	</div>
 </body>
 </html>
