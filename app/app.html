@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Saira:400,500,600,700,900" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="app.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="container">
+		<div class="task_wrap">
+			<h2 class="task_head"> Add Your Contact</h2>
+			<div id="main">
+				<div class="input_wrap">
+					<p class="label_txt"><label>Name </label></p>
+					<input type="text" name="name" id="username"> 
+				</div>
+				<div class="input_wrap">
+					<p class="label_txt">
+					<label> Contact </label> <br>
+					</p>
+					<input type="text" name="contact" id="contact">
+				</div>
+				<div id="button" class="input_wrap btn_icon">
+					<i class="fa fa-plus-circle fs35" aria-hidden="true"></i>
+				</div>
+			</div>
+		</div>
+		<div class="library_wrap">
+			<h2 class="task_head"> Dictionary </h2>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>
+							SL.NO
+						</th>
+						<th>
+							Name
+						</th>
+						<th>
+							Contact Number
+						</th>
+						<th>
+							Actions
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td colspan="4" style="color: #dcbebe;" id="empty">
+							Your directory is Empty....
+						</td>
+					</tr>
+					<tr>
+						<td>
+							1
+						</td>
+						<td>
+							Shiva
+						</td>
+						<td>
+							9052711211
+						</td>
+						<td>
+							<button type="button" class="edit"> <i class="fa fa-pencil-square" aria-hidden="true"></i> </button> &nbsp &nbsp 
+							<button type="button" class="delete"> <i class="fa fa-trash" aria-hidden="true"></i> </button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							2
+						</td>
+						<td>
+							Prasad
+						</td>
+						<td>
+							9191919191
+						</td>
+						<td>
+							<button type="button" class="edit"> <i class="fa fa-pencil-square" aria-hidden="true"></i> </button> &nbsp &nbsp 
+							<button type="button" class="delete"> <i class="fa fa-trash" aria-hidden="true"></i> </button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var Edit = document.getElementsByClassName('edit');
+		var Dele = document.getElementsByClassName('delete');
+
+		for(var i = 0; i < Edit.length; i++){
+			Edit[i].onclick = function(){
+				debugger
+				var Name = this.parentNode.parentNode.children[1].innerText;
+				var Contact_no = this.parentNode.parentNode.children[2].innerText;
+				console.log(Name + " ---- "+ Contact_no);
+				var username = document.getElementById('username');			
+				var contact = document.getElementById('contact');
+				
+				username.value = Name;
+				contact.value = Contact_no;
+
+
+
+			}
+		}
+		for(var i = 0; i < Dele.length; i++){
+			Dele[i].onclick = function(){
+				var del_row = this.parentNode.parentNode;
+					del_row.remove();
+					if(Dele.length == 0){
+						
+					}
+			}
+		}
+
+	</script>
+</body>
+</html>
