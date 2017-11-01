@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700" rel="stylesheet">
+
+	<style type="text/css" media="screen">
+		*{
+			margin: 0px;
+			padding: 0px;
+			font-family: 'Josefin Sans', sans-serif;
+		}
+		#wrap{
+			/*width: 1024px;*/
+			box-shadow: 0px 0px 2px 0px #000;
+			background: url(images/js_bg.png);
+			height:768px;
+			padding: 50px;
+			box-sizing: border-box;
+		}
+		#concepts > li{
+			list-style: none;
+			width: 300px;
+			height: 300px;
+			padding-top: 120px;
+			background: url(images/sticky_js.png) no-repeat;
+			background-size: cover; 
+			text-align: center;
+			box-sizing: border-box;
+			display: inline-block;
+		}
+
+		#concepts li a{
+			color: #54443f;
+		}
+		#concepts li > ul {
+			list-style: none;
+		}
+		.notes{
+			color:red !important;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<ul id="concepts">
+			<li>
+				<ul>
+					<li>
+						<a href="JS/intro.html" target="_blank">Introduction</a>	
+					</li>
+					<li>
+						<a href="basics.html" target="_blank" class="notes"> * notes </a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<ul>
+					<li>
+						<a href="JS/arrays.html" target="_blank"> Arrays </a>
+					</li>
+					<li>
+						<a href="JS/arrays_notes.html" target="_blank" class="notes"> * notes </a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<ul>
+					<li>
+						<a href="JS/objects.html" target="_blank"> Objects </a>
+					</li>
+					<li>
+						<a href="JS/objects_notes.html" class="notes" target="_blank"> * notes </a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
