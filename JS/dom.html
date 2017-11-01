@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<p id="one" class="two"> This is para 1</p>
+
+	<p class="three"> This is para 2</p>
+
+	<p id="three" class="two"> This is para 4</p>
+
+	<p id="two" class="two"> This is para 3</p>
+
+	<script type="text/javascript">
+		
+		// id, class, element
+
+
+		var One = document.getElementById('one');
+		console.log(One);
+
+		One.onclick = function(){
+			One.innerText = "This is Para 1 from JS";	
+		}
+
+		var Two = document.getElementsByClassName('three')[0];
+
+		var Ele = document.getElementsByTagName('p')[0];
+
+		var query = document.querySelector('p');
+
+		console.log(query);
+
+		// Ele.innerText = "This is Para 1 from JS";
+
+	</script>
+</body>
+</html>
