@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+			transition: 0.5s;
+		}
+		div{
+			background-color: #ccc;
+			width: 200px;
+			height: 100vh;
+			margin-left: -200px;
+			position: relative;
+		}
+		div ul{
+			list-style-type: none;
+		}
+		div ul li{
+			padding: 10px;
+			border-bottom: 1px solid;
+		}
+		#menu{
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			z-index: 11;
+
+		}
+	</style>
+</head>
+<body>
+	<button id="menu"> Menu </button>
+	<div id="project">
+		<ul>
+			<li>
+				Home
+			</li>
+			<li>
+				Home
+			</li>
+			<li>
+				Home
+			</li>
+			<li>
+				Home
+			</li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		var Btn = document.getElementById('menu');
+		var project = document.getElementById('project');
+			project.style.marginLeft = "-200px"
+			Btn.onclick = function(){
+				
+				if(project.style.marginLeft == "-200px"){
+					project.style.marginLeft = "0px";	
+				}else{
+					project.style.marginLeft = "-200px";
+				}
+			}
+	</script>
+</body>
+</html>
