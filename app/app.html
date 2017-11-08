@@ -24,6 +24,9 @@
 				<div id="button" class="input_wrap btn_icon">
 					<i class="fa fa-plus-circle fs35" aria-hidden="true"></i>
 				</div>
+				<div id="update_button" class="input_wrap btn_icon">
+					<i class="fa fa-pencil fs35" aria-hidden="true"></i>
+				</div>
 			</div>
 		</div>
 		<div class="library_wrap">
@@ -45,7 +48,7 @@
 						</th>
 					</tr>
 				</thead>
-				<tbody>
+				<tbody id="addData">
 					<tr>
 						<td colspan="4" style="color: #dcbebe;" id="empty">
 							Your directory is Empty....
@@ -88,23 +91,74 @@
 	<script type="text/javascript">
 		var Edit = document.getElementsByClassName('edit');
 		var Dele = document.getElementsByClassName('delete');
+		var Btn = document.getElementById('button');
+		var addData = document.getElementById('addData');
+		var username = document.getElementById('username');			
+		var contact = document.getElementById('contact');
+		var update_button = document.getElementById('update_button');
+		update_button.style.display = 'none';
 
+		// var i = 0;
+
+		Btn.addEventListener('click', function(){
+			var TR = document.createElement('tr');
+			var slNo = document.createElement('td');
+			var nameTd = document.createElement('td');
+			
+			nameTd.innerText = username.value;
+
+			var contactTd = document.createElement('td');
+			contactTd.innerText = contact.value;
+			var actionTd = document.createElement('td');
+				var edit = document.createElement('button');
+				edit.setAttribute('class', 'edit');
+				edit.setAttribute('type', 'button');
+				edit.innerText = 'edit';
+				var del = document.createElement('button');
+				del.setAttribute('class', 'delete');
+				del.innerText = 'del';
+
+			actionTd.appendChild(edit);
+			actionTd.appendChild(del);
+
+			TR.appendChild(slNo);
+			TR.appendChild(nameTd);
+			TR.appendChild(contactTd);
+			TR.appendChild(contactTd);
+			TR.appendChild(actionTd);
+
+			addData.appendChild(TR);
+			editfn();
+		});
+
+		editfn();
+		function editfn(){
 		for(var i = 0; i < Edit.length; i++){
 			Edit[i].onclick = function(){
 				debugger
+				var Namef = this.parentNode.parentNode.children[1];
 				var Name = this.parentNode.parentNode.children[1].innerText;
 				var Contact_no = this.parentNode.parentNode.children[2].innerText;
 				console.log(Name + " ---- "+ Contact_no);
-				var username = document.getElementById('username');			
-				var contact = document.getElementById('contact');
 				
 				username.value = Name;
 				contact.value = Contact_no;
 
+				Btn.style.display = "none";
+				update_button.style.display = "block";
 
+					console.log(Namef);
+					update_button.onclick = function(){		
+					Namef.innerText = username.value;
+					
+					// Contact_no = contact.value;					
+				}
+				console.log(Namef);
 
 			}
+
 		}
+	
 		for(var i = 0; i < Dele.length; i++){
 			Dele[i].onclick = function(){
 				var del_row = this.parentNode.parentNode;
@@ -114,6 +168,7 @@
 					}
 			}
 		}
+}
 
 	</script>
 </body>

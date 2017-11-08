@@ -64,3 +64,6 @@ input[type='text']{
 .clearfix{
 	clear: both;
 }
+.mrBtn{
+	margin-right:3px !important;
+}
