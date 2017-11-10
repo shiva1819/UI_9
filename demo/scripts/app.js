@@ -16,9 +16,22 @@ function addTask(){
 	var userVal = username.value;
 	var conta = contact.value;
 
+	var CharregEx = /^[a-zA-Z]+$/;
+	var NoregEx = /^[0-9]+$/;
 
-	if(userVal == "" || conta == ""){
-		alert('Please enter a detaild info...');
+	// if(CharregEx.test(userVal)){
+	// 	alert('OKay..')
+	// }else{
+	// 	alert('nope...');
+	// }
+
+	// return false;
+
+	if(!CharregEx.test(userVal)){
+		alert('Please enter a valid Name...');
+		
+	}else if(!NoregEx.test(conta)){
+		alert('Please enter a valid Contact...');
 	}
 	else{
 	// alert(userVal + "---------" + conta);
@@ -85,6 +98,7 @@ function editfn(){
  		editClass[i].onclick = function(){
  			// debugger
  			var editNameVal = this.parentNode.parentNode.children[1];
+ 			// var slNo = this.parentNode.parentNode.children[0];
  			var ContactVal = this.parentNode.parentNode.children[2];
  				username.value = editNameVal.innerText;
  				contact.value = ContactVal.innerText;		
@@ -93,7 +107,8 @@ function editfn(){
  				debugger
  				btnupdate.onclick = function(){
  					editNameVal.innerText = username.value;
- 					ContactVal.innerText = contact.value;	
+ 					ContactVal.innerText = contact.value;
+					// 	empty the input values and Get add Button back.
  				}
  		}
  	}
