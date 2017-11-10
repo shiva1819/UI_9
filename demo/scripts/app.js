@@ -3,12 +3,24 @@ var contact = document.getElementById('contact');
 var demo;
 var icon = document.getElementById('icon');
 var taskCount = document.getElementById('taskCount');
-
+var count = 0;
 demo = document.getElementById("btnAdd")
 
 demo.addEventListener("click",addTask,false);
 editfn();
 deletefn();
+countfn();
+
+function countfn(){
+	var eleCount = document.querySelectorAll('.edit');
+	console.log(eleCount);
+	// return false;
+	for(var i = 0; i < eleCount.length; i++){
+		var tdCount = eleCount[i].parentNode.parentNode.children[0];
+			tdCount.innerText = i + 1;
+	}	
+}
+
 
 function addTask(){
 
@@ -83,6 +95,7 @@ function addTask(){
 
  	editfn();
  	deletefn();
+ 	countfn();
 
  	username.value = "";
  	contact.value = "";
@@ -122,7 +135,9 @@ function deletefn(){
  			var removeTR = this.parentNode.parentNode;
  				taskCount.removeChild(removeTR);
  			console.log(this.parentNode.parentNode);
+ 			countfn();
  		}
  	}
+
 }
  
