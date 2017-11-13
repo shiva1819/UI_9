@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	
+	<script type="text/javascript">
+	'use strict';
+
+		// Hoisting,
+	// var abc;
+
+	// clousre.
+	function demo(a,b){
+
+		var x  = 10;
+		a = 20;
+		function demo1(){
+			console.log(x+a);
+		}
+		demo1();		
+	}
+	demo();
+
+// Encapulation.
+(function(){
+	var def = 20;
+	console.log(20);
+})();
+
+// constructor, factory, prototype,
+	function test(name,age){
+		var obj = {};
+			obj.name = name;
+			obj.age = age;
+		return obj;
+	};
+
+	var arr = new test('SHiva',123);
+	console.log(arr.name);
+
+
+
+
+	/*test.prototype.sal = 3000;
+	test.prototype.details = function(){
+		return this.name +'--'+ this.age +"--"+ this.sal;
+	}
+
+	var arr = new test('Shiva',[12,34]);
+	console.log(arr.age[0]);
+	console.log(arr.details());
+
+	var arr1 = new test('Prasad',32);
+	test.prototype.sal = 5000
+	console.log(arr1.name + "--"+ arr1.sal);
+	console.log(arr1.details());*/
+
+	</script>
+</body>
+</html>
