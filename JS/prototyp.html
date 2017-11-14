@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		(function(name,age){
+		// inheritance, polymorphism.
+		var person = function(name,age){
+			this.name = name;
+			this.age = age;
+		}
+
+		var emp = function(sal,id){
+			this.salary = sal;
+			this.id = id;
+		}
+
+
+
+
+		var person1 = new person('SHiva', 30);
+		emp.prototype = person1; // inheritance
+		var emp1 = new emp(25000, 121);
+		console.log(emp1.name);
+	})('SHiva', 50);
+	</script>
+</body>
+</html>
