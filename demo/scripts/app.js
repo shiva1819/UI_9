@@ -121,6 +121,10 @@ function editfn(){
  				btnupdate.onclick = function(){
  					editNameVal.innerText = username.value;
  					ContactVal.innerText = contact.value;
+ 					btnupdate.style.display = 'none';
+ 					btnAdd.style.display = 'block';
+ 					username.value = null;
+ 					contact.value = null;
 					// 	empty the input values and Get add Button back.
  				}
  		}
@@ -129,15 +133,20 @@ function editfn(){
 
 function deletefn(){
  	var delClass = document.getElementsByClassName('delete');
- 	for(var i = 0; i < delClass.length; i++ ){
- 		// console.log(edit[i]);
- 		delClass[i].onclick = function(){
- 			var removeTR = this.parentNode.parentNode;
- 				taskCount.removeChild(removeTR);
- 			console.log(this.parentNode.parentNode);
- 			countfn();
- 		}
+
+ 	
+	 	for(var i = 0; i < delClass.length; i++ ){
+	 		// console.log(edit[i]);
+	 		delClass[i].onclick = function(){
+	 			var removeTR = this.parentNode.parentNode;
+	 				taskCount.removeChild(removeTR);
+	 			console.log(this.parentNode.parentNode);
+	 			countfn();
+	 		}
+	 	}
+ 	
  	}
+
 
 }
  
