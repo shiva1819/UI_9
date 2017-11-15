@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+		*{
+			margin:0px;
+			padding: 0px;
+		}
+		body{
+			background-color: lime;
+		}
+		#main{
+			width:100%;
+			background-color: #ccc;
+		}
+		h2#logo{
+			margin: 0px;
+			padding: 10px;
+			text-align: center;
+			width: 20%;
+			box-sizing: border-box;
+			display: inline-block;
+			transition: 2s;
+			/*transition-delay: 1s; 
+			transition-property:font-size,color;*/
+		
+		}
+		h2#logo:hover{
+			font-size: 40px;
+			color: #fff;
+		}
+		#menu{
+			display: inline-block;
+			margin: 0px;
+			padding: 10px;
+			box-sizing: border-box;
+		}
+		#menu li{
+			display: inline-block;
+			margin-left: 10px;
+			border-right:1px solid #fff;
+			padding: 10px;
+			box-sizing: border-box;
+		}
+
+		@media screen and (min-width: 1024px){
+			body{
+				background-color: crimson !important;
+			}
+			#main{
+				width: 20%;
+				height: 100vh;
+			}
+		h2#logo{
+			margin: 0px;
+			padding: 50px 10px 10px 10px;
+			text-align: center;
+			width: 100%;
+			box-sizing: border-box;
+
+			/*display: inline-block;*/
+		}
+		h2#logo:hover{
+			font-size: 40px;
+			color: #fff;
+		}
+		#menu{
+			display: block;
+			margin: 0px;
+			padding: 10px;
+			box-sizing: border-box;
+		}
+		#menu li{
+			display:block;
+			line-height: 50px;
+			border:none;
+			width: 100%;
+			text-align: center;
+			padding: 10px;
+			box-sizing: border-box;
+		}
+		}
+		@media screen and (min-width: 500px){
+			body{
+				background-color: yellow;
+			}
+		} 
+	</style>
+</head>
+<body>
+	<div id="main">
+		<h2 id="logo">
+			Logo
+		</h2>
+		<ul id="menu">
+			<li>
+				Home
+			</li>
+			<li>
+				About
+			</li>
+			<li>
+				Contact
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <style type="text/css">
+        
+    </style>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		var xhttp = new XMLHttpRequest();
+        
+        xhttp.onreadystatechange = function(){
+//            debugger
+            if(this.readyState == '4' && this.status == '200'){
+                var data = JSON.parse(this.response);
+                console.log(data);
+                content(data);
+                
+            }
+        }
+        
+        xhttp.open("GET", "https://jsonplaceholder.typicode.com/users", true);
+        xhttp.send();
+        
+        function content(data){
+            for(var i=0; i < data.length; i++){
+                    console.log(data[i].name);
+                }
+        }
+
+	</script>
+</body>
+</html>
