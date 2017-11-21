@@ -9,12 +9,13 @@
 			margin: 100px auto;
 			border:1px solid #000;
 			transform-style: preserve-3d;
-			perspective-origin: 0% 25%;
+			perspective-origin: 50% 50%;
+			
+			-webkit-perspective: 100px;
+			-moz-perspective: 100px;
+			-ms-perspective: 100px;
+			-o-perspective: 100px;			
 			perspective: 300px;
-			-webkit-perspective: 300px;
-			-moz-perspective: 300px;
-			-ms-perspective: 300px;
-			-o-perspective: 300px;			
 		}
 		#child{
 			width: 300px;
@@ -23,7 +24,7 @@
 			border:1px solid red;
 			background-color: #ccc;
 			transition: 1s;
-			transition-timing-function: cubic-bezier(.11,.55,.02,.08);
+			transition-timing-function: cubic-bezier(.24,.26,.08,.22);
 		}
 		#parent:hover #child{
 			transform-origin:0px 0px;
