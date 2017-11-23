@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#drop{
+			width: 200px;
+			/*height: 200px;*/
+			border:1px solid;
+			margin: auto;
+			padding: 50px;
+			box-sizing: border-box;	
+		}
+		#drop1{
+			width: 200px;
+			/*height: 200px;*/
+			border:1px solid;
+			margin: auto;
+			padding: 50px;
+			box-sizing: border-box;	
+		}
+		#drag{
+			width: 100px;
+			height: 100px;
+			background: #ccc;
+		}
+		#drag1{
+			width: 100px;
+			height: 100px;
+			background: #fcc;
+		}
+	</style>
+</head>
+<body>
+	<div id="drop" ondrop="drop(event)" ondragover="makeDrag(event)">
+	
+	</div>
+	<div id="drop1" ondrop="drop(event)" ondragover="makeDrag(event)">
+	
+	</div>
+	
+	<div id="drag" draggable="true" ondragstart="drag(event)">
+		
+	</div>
+	<div id="drag1" draggable="true" ondragstart="drag(event)">
+		
+	</div>
+	<script type="text/javascript">
+
+		function makeDrag(ev){
+			ev.preventDefault();
+		}
+
+		function drag(ev){
+			console.log(ev.target.id);
+			ev.dataTransfer.setData('item', ev.target.id);
+		}
+
+		function drop(ev){
+			ev.preventDefault();
+
+			var demo = ev.dataTransfer.getData('item');
+			console.log(demo);
+			ev.target.appendChild(document.getElementById(demo));
+		}
+	
+	</script>
+</body>
+</html>
