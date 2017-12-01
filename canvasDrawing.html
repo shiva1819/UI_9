@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body{
+			margin: 0px;
+			padding: 0px;
+		}
+		#mycan{
+			border:3px solid red;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="mycan" width="300" height="300">
+		
+	</canvas>
+	<button id="clear" type="button"> clear </button>
+	<script type="text/javascript">
+		var canvas = document.getElementById('mycan');
+		var ctx = canvas.getContext('2d');
+
+
+		var mouse = {x:0, y:0};
+		var mouse_to = {x:0, y:0};
+
+		canvas.onmousemove = function(e){
+			mouse_to.x = mouse.x;
+			mouse_to.y = mouse.y;
+
+			// console.log(e.pageX +'-----Y'+ e.pageY);
+
+			mouse.x = e.pageX - this.offsetLeft;
+			mouse.y = e.pageY - this.offsetTop;
+		}
+
+		ctx.lineWidth = 5;
+		ctx.linCap = 'round';
+		ctx.lineJoin = 'round';
+
+
+		canvas.addEventListener('mousedown', function(e) {
+			canvas.addEventListener('mousemove', onDraw, false);
+		}, false);
+	
+		canvas.addEventListener('mouseup', function() {
+			canvas.removeEventListener('mousemove', onDraw, false);
+		}, false);
+	
+	var onDraw = function() {
+		ctx.beginPath();
+		ctx.moveTo(mouse_to.x, mouse_to.y);
+		ctx.lineTo(mouse.x, mouse.y);
+		ctx.closePath();
+		ctx.strokeStyle = 'red';
+		ctx.stroke();
+	};
+
+	var clear = document.getElementById('clear');
+		clear.onclick = function(){
+			ctx.clearRect(0,0,300,300);
+		}
+
+	</script>
+</body>
+</html>
