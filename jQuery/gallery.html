@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		#gal{
+			width: 650px;
+			border:1px solid #000;
+			margin: 100px auto;
+			padding: 10px;
+			box-sizing: border-box;
+		}
+		#gal ul li{
+			display: inline-block;
+			width: 200px;
+			border:1px solid #ccc;
+			border-radius: 5px;
+			padding: 5px;
+			box-sizing: border-box;
+		}
+		#gal ul li img{
+			width: 100%;
+		}
+		#demo{
+			width: 90%;
+			height: 90vh;
+			background: rgba(0,0,0,0.5);
+			margin: auto;
+			position: fixed;
+			top: 30px;
+			left: 70px;
+			overflow: hidden;
+		}
+		#demo img{
+			width:100%;
+		}
+	</style>	
+</head>
+<body>
+	<div id="gal">
+		<ul>
+			<li>
+				<img src="../images/gal1.jpg">	
+			</li>
+			<li>
+				<img src="../images/gal2.jpg">		
+			</li>
+			<li>
+				<img src="../images/gal3.jpg">
+			</li>
+		</ul>
+		
+	</div>
+	<div id="demo" style="display: none;">
+		
+	</div>
+	<script type="text/javascript">
+		// 
+		$(document).ready(function(){
+			$('#gal img').click(function(){
+				$('#demo').slideDown(2000, function(){
+					alert('Done..');
+				});
+				var Src = $(this).attr('src');
+				$('#demo').html("<img src='"+ Src +"''>");
+				
+				// $("#demo img").attr('src', Src);
+				
+				$("#demo img").click(function(){					
+					$(this).parent().slideUp(2000);
+				});
+			});
+		});
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+	<div>
+		<table>
+			<thead>
+				<tr>
+					<th>
+						Name
+					</th>
+				</tr>
+			</thead>
+			<tbody id="addData">
+				
+			</tbody>
+		</table>
+	</div>
+
+	<script type="text/javascript">
+		var dynData;
+		$.ajax({
+			url:"https://jsonplaceholder.typicode.com/users",
+			success:function(data){
+				// console.log(data);
+			
+				for(var i = 0; i< data.length; i++){
+					dynData += "<tr><td>"+ data[i].name +"</td></tr>"
+				}
+				console.log(dynData);
+				$('#addData').append(dynData);
+
+			},
+			erroe:function(err){
+
+			}
+		})	
+	</script>
+</body>
+</html>
