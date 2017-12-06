@@ -14,9 +14,13 @@
 					</th>
 				</tr>
 			</thead>
+
 			<tbody id="addData">
 				
+				<td> 1 </td>
+				
 			</tbody>
+			
 		</table>
 	</div>
 
@@ -31,7 +35,8 @@
 					dynData += "<tr><td>"+ data[i].name +"</td></tr>"
 				}
 				console.log(dynData);
-				$('#addData').append(dynData);
+				// append,  prepend, after(), before
+				$('#addData').html(dynData);
 
 			},
 			erroe:function(err){
