@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Ajax Site </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="../css/main.css" type="text/css" rel="stylesheet">   
+    <link href="../css/simple.css" type="text/css" rel="stylesheet">   
+</head>
+
+<body>
+    <header id="mainHeader">
+        <header id="pageHeader">
+            <logo id="Logo" class="fL">
+                Simple Site
+            </logo>
+            <nav id="mainMenu" class="fR">
+                <ul class="fR uList">
+                    <li class="menu_active">
+                        <a href="#home"> Home</a>
+                    </li>
+                    <li>
+                        <a href="#About"> About </a>
+                    </li>
+                    <li>
+                        <a href="#gallery"> Gallery </a>
+                    </li>
+                    <li>
+                        <a href="#contact"> Contact </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="clearfix"></div>
+        </header>
+    </header>
+    <article id="showcase">
+        
+    </article>
+    <script>
+        
+        $.ajax({
+            url:"home.html"
+        })
+        .done(function(res){
+             $('#showcase').html(res);
+        });
+        
+     $('#mainMenu ul li a').click(function(){   
+        var Menu = $(this).attr('href').split('#')[1];
+
+        $('#mainMenu ul li').removeClass('menu_active');
+        $(this).parent().addClass('menu_active');
+
+        $.ajax({
+            url:Menu+'.html',
+            success:function(res){
+                $('#showcase').html(res);
+            }
+        })
+    });
+    </script>
+</body>
+
+</html>

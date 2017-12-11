@@ -1,0 +1,45 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.fL{
+    float: left;
+}
+.fR{
+    float: right;
+}
+.uList li{
+    list-style: none;
+    display: inline-block;
+    padding: 5px;
+    line-height: 50px;
+    width: 100px;
+    text-align: center;
+}
+.menu_active{
+    background-color:rgb(126, 62, 62);
+}
+.uList li a{
+    color: rgb(250, 250, 250);
+    text-decoration: none;
+
+}
+.wd100{
+    width: 100%;
+}
+.wd70{
+    width: 70%;
+}
+.wd30{
+    width: 30%;
+}
+.ul li{
+    list-style: none;
+}
+.text-center{
+    text-align: center;
+}
+
+.clearfix{
+    clear: both;
+}

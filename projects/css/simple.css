@@ -1,0 +1,72 @@
+#mainHeader{
+    background: #945656;
+}
+#pageHeader{
+    background: #945656;
+    width: 90%;
+    margin: auto;
+}
+#Logo{
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    width: 15%;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 1px 5px rgb(43, 40, 40);
+    text-transform: uppercase;
+}
+#mainMenu{
+    width: 80%;
+}
+#mainMenu ul{
+    margin: 0px;
+    padding: 0px;
+    text-transform: uppercase;
+}
+#rightContent{
+    background: #ccc;
+    min-height: 393px;
+}
+#rightContent ul li{
+    padding: 10px;
+    list-style-position:inside;
+    box-sizing: border-box;
+}
+#content2{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+#content2 ul li{
+    width: 30%;
+    display: inline-block;
+    text-align: center;
+    margin-right: 3%;
+}
+#content2 ul li p{
+    text-align: justify;
+}
+#footerMenu{
+    background: #945656;;
+}
+#footerMenu{
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+#footerMenu ul{
+    width: 30%;
+    margin: auto;
+}
+#footerMenu ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+
